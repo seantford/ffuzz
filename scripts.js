@@ -13,26 +13,50 @@
 //add closeout button and 'esc' to close functionality
 
 // define your variables
-var usernameInput = getElementsById("name")
-var username = ;
 
-var emailInput = getElementsById("email")
-var useremail = emailInput.toLowerCase()
-
-var emailConfirmInput = getElementsById("emailconfirm")
+$(document).ready(function() {
+	$('#signup').hide();
+	$("#black-overlay").hide();
 
 
-var submitButton = getElementsById("signup-submit")
-var cancelButton = getElementsById("signup-cancel")
 
-var closeButton = getElementsById("close-button")
 
-var overlay = getElementsById("black-overlay")
 
-var interestsList = {}
 
-//once
-var confirmEmail = function() {
-	useremail = 
-}
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+// var usernameInput = getElementsById("name")
+// var username = usernameInput.toLowerCase();
+
+// var emailInput = getElementsById("email");
+// var useremail = emailInput.toLowerCase();
+
+// var emailConfirmInput = toLowercase.getElementsById("emailconfirm");
+
+
+// var submitButton = getElementsById("signup-submit");
+// var cancelButton = getElementsById("signup-cancel");
+
+// var closeButton = getElementsById("close-button");
+
+// var overlay = getElementsById("black-overlay");
+
+// var interestsList = {};
+
+// //once
+// var confirmEmail = function() {
+	
+// };
 
