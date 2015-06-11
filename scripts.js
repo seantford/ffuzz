@@ -12,21 +12,14 @@ function popup() {
 
 $("form span").hide();
 
-
 var $name = $("#name");
 var $email = $("#email");
 var $emailconfirm = $("#emailconfirm");
 
-var $submitButton = $("#signup-submit");
-
-//on keypress of confirm email
-//if ifconfirmed is false
-//show form span
 
 function isConfirmed() {
 	return ( $email.val() === $emailconfirm.val() );
 };
-
 
 function isCompleted() {
 	return ( $emailconfirm.val() !== "" ) && ( $name.val() !== "" );
@@ -44,27 +37,41 @@ function pullInterests() {
 			$interests.push($(this).attr("id"));
 		};
 	});
-	
 };
 
+var $formData = {}
+function pullInputs() {
+	$formData = {
+		name: $name.val(),
+		email: $email.val(),
+		interests: $interests
+	}
+};
+
+var $submitButton = $("#signup-submit");
+$submitButton.click( function(event)  {
+	event.preventDefault();
+	$("form span").hide();
+	if ( inputsReady() ) {
+		console.log("inputs ready, good to go");
+		pullInterests();
+		console.log($interests);
+		pullInputs();
+		console.log($formData);
+		$("#signup").hide();
+		$("#black-overlay").hide();
+
+	} else if ( isCompleted() ) {
+		console.log("is completed, but not is confirmed");
+		$("#confirm").show();
+	} else {
+		console.log("is not completed or confirmed");
+		$("#complete").show();
+	};
 
 
 
-
-
-
-// $submitButton.click( function(event)  {
-// 	event.preventDefault();
-// 	if ( isConfirmed() && isCompleted() ) {
-		
-// 	} else if ( isCompleted() ) {
-
-// 	} else {
-
-// 	};
-
-
-// });
+});
 
 
 
