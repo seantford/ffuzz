@@ -14,24 +14,43 @@
 
 // define your variables
 $(document).ready(function() {
-	setTimeout(popup, 2000);
+	setTimeout(popup, 1000);
 	function popup() {
 		$("#signup").show();
 		$("#black-overlay").show();
 	};
 });//ready
 
-var formInfo = {};
+$("form span").hide();
 
-// $("form").submit()
+function isConfirmed() {
+	return $email
+
+
+	var $name = $("#name").val();
+	var $email = $("#email").val();
+	var $emailconfirm = $("#emailconfirm").val();
+
 $("#signup-submit").click(function(event){
 	event.preventDefault();
-	var visitorname = $("#name").val();
-	console.log(visitorname)
-});
 
-// var useremail = $("#email").val;
-// var emailConfirm = $("emailconfirm").val;
+
+	function isConfirmed() {
+		if ( $email === $emailconfirm ){
+			return true;
+			$("form span").hide();
+		} else {
+			return false;
+			$("form span").show();
+		};
+	};
+
+
+	console.log( $name + $email + $emailconfirm + ", isConfirmed: " + isConfirmed() );
+}); //submit
+
+// var formInfo = {};
+// var interestsList = [];
 // var submitButton = getElementsById("signup-submit");
 // var cancelButton = getElementsById("signup-cancel");
 // var closeButton = getElementsById("close-button");

@@ -117,8 +117,13 @@ footer p {
 	font-weight: bolder;
 	text-align: center;
 }
+
 form h1 {
 	margin-bottom: 0.33em;
+}
+
+form span {
+	color: red;
 }
 
 /*MEDIA QUERY FOR FORM*/
