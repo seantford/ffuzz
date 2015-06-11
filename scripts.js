@@ -2,52 +2,91 @@
 	//emailer
 //how do i make it
 	//lightbox emailer that pops up on arrival
-	
-//create a pop up form
-//add input for name
-//add input for email 
-//add input for email confirmation
-//comment section
-//add checkboxes for interests
-//add submit button
-//add closeout button and 'esc' to close functionality
 
-// define your variables
-$(document).ready(function() {
-	setTimeout(popup, 1000);
-	function popup() {
-		$("#signup").show();
-		$("#black-overlay").show();
-	};
-});//ready
+//after page loads, popup form after 3 seconds
+setTimeout(popup, 1000);
+function popup() {
+	$("#signup").show();
+	$("#black-overlay").show();
+};
 
 $("form span").hide();
 
+
+var $name = $("#name");
+var $email = $("#email");
+var $emailconfirm = $("#emailconfirm");
+
+var $submitButton = $("#signup-submit");
+
+//on keypress of confirm email
+//if ifconfirmed is false
+//show form span
+
 function isConfirmed() {
-	return $email
+	return ( $email.val() === $emailconfirm.val() );
+};
 
 
-	var $name = $("#name").val();
-	var $email = $("#email").val();
-	var $emailconfirm = $("#emailconfirm").val();
+function isCompleted() {
+	return ( $emailconfirm.val() !== "" ) && ( $name.val() !== "" );
+};
 
-$("#signup-submit").click(function(event){
-	event.preventDefault();
+function inputsReady() {
+	return ( isConfirmed() && isCompleted() );
+};
 
 
-	function isConfirmed() {
-		if ( $email === $emailconfirm ){
-			return true;
-			$("form span").hide();
-		} else {
-			return false;
-			$("form span").show();
+var $interests = [];
+function pullInterests() {
+	$(":checkbox").map(function() {
+		if ($(this).prop("checked")) {
+			$interests.push($(this).attr("id"));
 		};
-	};
+	});
+	
+};
 
 
-	console.log( $name + $email + $emailconfirm + ", isConfirmed: " + isConfirmed() );
-}); //submit
+
+
+
+
+
+// $submitButton.click( function(event)  {
+// 	event.preventDefault();
+// 	if ( isConfirmed() && isCompleted() ) {
+		
+// 	} else if ( isCompleted() ) {
+
+// 	} else {
+
+// 	};
+
+
+// });
+
+
+
+
+
+
+
+
+
+// $("#signup-submit").click(function(event){
+// 	event.preventDefault();
+// 	function isConfirmed() {
+// 		if ( $email === $emailconfirm ){
+// 			return true;
+// 			$("form span").hide();
+// 		} else {
+// 			return false;
+// 			$("form span").show();
+// 		};
+// 	};
+// 	console.log( $name + $email + $emailconfirm + ", isConfirmed: " + isConfirmed() );
+// }); //submit
 
 // var formInfo = {};
 // var interestsList = [];
