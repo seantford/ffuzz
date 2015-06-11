@@ -3,8 +3,8 @@
 //how do i make it
 	//lightbox emailer that pops up on arrival
 
-//after page loads, popup form after 3 seconds
-setTimeout(popup, 1000);
+//after page loads, popup form after 5 seconds
+setTimeout(popup, 5000);
 function popup() {
 	$("#signup").show();
 	$("#black-overlay").show();
@@ -62,21 +62,27 @@ $submitButton.click( function(event)  {
 		$("#black-overlay").hide();
 
 	} else if ( isCompleted() ) {
-		console.log("is completed, but not is confirmed");
+		console.log("iscomplete, but not isconfirmed");
 		$("#confirm").show();
 	} else {
-		console.log("is not completed or confirmed");
+		console.log("is not complete or confirmed");
 		$("#complete").show();
 	};
-
-
-
 });
 
+var $cancelButton = $("#signup-cancel");
+$cancelButton.click(function(event) {
+	event.preventDefault();
+	$("#signup").hide();
+	$("#black-overlay").hide();
+});
 
-
-
-
+var $closeButton = $("close-window");
+$cancelButton.click(function(event) {
+	event.preventDefault();
+	$("#signup").hide();
+	$("#black-overlay").hide();
+});
 
 
 
