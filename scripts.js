@@ -37,11 +37,11 @@ function pullInputs() {
 		name: $name.val(),
 		email: $email.val(),
 		interests: $interests
-	}
+	};
 };
 
 var $submitButton = $("#signup-submit");
-$submitButton.click( function(event)  {
+$submitButton.click( function(event) {
 	event.preventDefault();
 	$("form span").hide();
 	if ( inputsReady() ) {
@@ -57,15 +57,13 @@ $submitButton.click( function(event)  {
 	};
 });
 
-var $cancelButton = $("#signup-cancel");
-$cancelButton.click(function(event) {
+$("#signup-cancel").click(function(event) {
 	event.preventDefault();
 	$("#signup").hide();
 	$("#black-overlay").hide();
 });
 
-var $closeButton = $("#close-window");
-$closeButton.click(function(event) {
+$("#close-window").click(function(event) {
 	event.preventDefault();
 	$("#signup").hide();
 	$("#black-overlay").hide();
