@@ -1,0 +1,86 @@
+/*
+* {
+	border-width: 5px;
+	border-style: solid; 
+	border-color: tomato;
+}*/
+
+
+body {
+	font-family: 'Amatic SC';
+	text-align: center;
+	background-color: slategrey;
+}
+
+/*header {
+	margin-top: 0.25em;
+	margin-bottom: 1em;
+}*/
+
+.main-header {
+	display: inline-block;
+	font-size: 8em;
+	color: #000;
+	line-height: 1.33em;
+	margin: 0;
+	/*color: silver;*/
+	/*text-shadow: 5px 5px 5px silver;*/
+}
+
+#FFUZZ {
+	color: #fff;
+	font-weight: normal;
+	text-shadow: 5px 5px 7.5px #000;
+		
+}
+
+
+.APart1 img {
+	width: 75%;
+	margin: 0 12.5% 0;
+	border: 4px #000 solid;
+	max-width: 500px;
+}
+
+#coming-soon {
+	font-size: 7em;
+	line-height: 1em;
+}
+
+.AP-redirect {
+	font-size: 3em;
+	max-width: 80%;
+	margin: 0 10%;
+}
+
+.AP-redirect span {
+	display: inline-block;
+	line-height: 0.5em;
+}
+
+#Action-Pollock {
+	line-height: 0.75em;
+	font-size: 3em;
+	color: silver;
+	text-shadow: 5px 5px 10px #000;
+	display: block;
+
+}
+
+#sweet {
+
+}
+
+#cosmic {
+
+}
+
+a {
+	color: silver;
+	text-decoration: none;
+}
+
+footer p {
+	color: silver;
+	font-size: 1.5em;
+}
